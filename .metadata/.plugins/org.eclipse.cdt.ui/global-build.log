@@ -1,0 +1,80 @@
+20:48:04 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:9: warning: implicit declaration of function 'pb13_led_init'; did you mean 'pa5_led_init'? [-Wimplicit-function-declaration]
+   25 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+      |         pa5_led_init
+../Src/main.c: At top level:
+../Src/main.c:66:6: warning: conflicting types for 'pb13_led_init'; have 'void(void)'
+   66 | void pb13_led_init(void)
+      |      ^~~~~~~~~~~~~
+../Src/main.c:25:9: note: previous implicit declaration of 'pb13_led_init' with type 'void(void)'
+   25 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO.elf
+ 
+arm-none-eabi-size  GPIO.elf 
+arm-none-eabi-objdump -h -S GPIO.elf  > "GPIO.list"
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO.list
+ 
+20:48:08 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 
+20:48:56 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 
+20:52:59 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:9: warning: implicit declaration of function 'pb13_led_init'; did you mean 'pa5_led_init'? [-Wimplicit-function-declaration]
+   25 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+      |         pa5_led_init
+../Src/main.c: At top level:
+../Src/main.c:66:6: warning: conflicting types for 'pb13_led_init'; have 'void(void)'
+   66 | void pb13_led_init(void)
+      |      ^~~~~~~~~~~~~
+../Src/main.c:25:9: note: previous implicit declaration of 'pb13_led_init' with type 'void(void)'
+   25 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO.elf
+ 
+arm-none-eabi-size  GPIO.elf 
+arm-none-eabi-objdump -h -S GPIO.elf  > "GPIO.list"
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO.list
+ 
+20:53:03 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 
+20:53:39 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2560	     20	   1572	   4152	   1038	GPIO.elf
+Finished building: default.size.stdout
+ 

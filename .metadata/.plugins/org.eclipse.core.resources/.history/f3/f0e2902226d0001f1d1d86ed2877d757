@@ -1,0 +1,24 @@
+
+
+
+
+//BTN = PC13, BUS = AHB1EN bit 2
+//LED = PA5, BUS = AHB1EN bit 0
+
+int counter;
+int main()
+{
+	//Configure PA5 as output pin
+	//Enable clock
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+
+	GPIO_InitTypeDef	GPIO_InitStruct ={0};
+
+	//Configure PC13 as Input pin
+	//Enable clock
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	while(1)
+	{
+		counter++;
+	}
+}

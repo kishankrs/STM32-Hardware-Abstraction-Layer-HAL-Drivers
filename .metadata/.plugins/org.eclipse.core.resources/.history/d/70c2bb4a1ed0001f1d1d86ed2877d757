@@ -1,0 +1,15 @@
+
+
+
+
+//BTN = PC13
+//LED = PA5
+
+int counter;
+int main()
+{
+	while(1)
+	{
+		counter++;
+	}
+}
