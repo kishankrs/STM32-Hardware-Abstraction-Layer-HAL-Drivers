@@ -78,3 +78,493 @@ arm-none-eabi-size  GPIO.elf
    2560	     20	   1572	   4152	   1038	GPIO.elf
 Finished building: default.size.stdout
  
+15:02:59 **** Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:24:9: warning: implicit declaration of function 'pb13_led_init'; did you mean 'pa5_led_init'? [-Wimplicit-function-declaration]
+   24 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+      |         pa5_led_init
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: GPIO.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:03:02 **** Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.o"
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Src/main.c:1:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:36:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:83:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:98:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c:87:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:40:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c:78:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c:64:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c:49:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:26:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c:108:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c:25:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:69:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c:25:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c:219:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o] Error 1
+In file included from C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c:199:
+../Inc/stm32f4xx_hal_conf.h:411:11: fatal error: stm32f4xx_hal_uart.h: No such file or directory
+  411 |  #include "stm32f4xx_hal_uart.h"
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:61: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:07:59 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: GPIO.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:07:59 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+../Src/main.c: In function 'main':
+../Src/main.c:24:9: warning: implicit declaration of function 'pb13_led_init'; did you mean 'pa5_led_init'? [-Wimplicit-function-declaration]
+   24 |         pb13_led_init();
+      |         ^~~~~~~~~~~~~
+      |         pa5_led_init
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: UART_Tx_Polling.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:08:24 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: GPIO.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:08:25 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: UART_Tx_Polling.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:08:45 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: GPIO.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:09:15 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO.elf
+ 
+arm-none-eabi-size  GPIO.elf 
+arm-none-eabi-objdump -h -S GPIO.elf  > "GPIO.list"
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO.list
+ 
+15:09:23 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+15:09:24 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Debug/../Src/main.c:24: undefined reference to `pb13_led_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: UART_Tx_Polling.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:09:40 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+15:09:40 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+00:00:41 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+00:00:42 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   1348	     20	   1572	   2940	    b7c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+00:00:54 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+00:00:54 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   1348	     20	   1572	   2940	    b7c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+14:51:43 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+14:51:44 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   1848	     40	   1632	   3520	    dc0	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:02:08 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+15:02:08 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+../Src/system_stm32f4xx.c:8:15: error: conflicting types for 'AHBPrescTable'; have 'const uint8_t[8]' {aka 'const unsigned char[8]'}
+    8 | const uint8_t AHBPrescTable[8] = {0,0,0,0,1,2,3,4};
+      |               ^~~~~~~~~~~~~
+../Src/system_stm32f4xx.c:7:15: note: previous definition of 'AHBPrescTable' with type 'const uint8_t[16]' {aka 'const unsigned char[16]'}
+    7 | const uint8_t AHBPrescTable[16] = {0,0,0,0,0,0,0,0,1,2,3,4,6,7,8,9};
+      |               ^~~~~~~~~~~~~
+make: *** [Src/subdir.mk:28: Src/system_stm32f4xx.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:02:38 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+15:02:39 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   1924	     40	   1632	   3596	    e0c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:04:38 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1924	     40	   1632	   3596	    e0c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+15:05:20 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1924	     40	   1632	   3596	    e0c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+15:08:30 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1924	     40	   1632	   3596	    e0c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+15:19:27 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   1924	     40	   1632	   3596	    e0c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:28:04 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:30:59 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:34:40 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:36:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j16 all 
+arm-none-eabi-size  GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     20	   1572	   4056	    fd8	GPIO.elf
+Finished building: default.size.stdout
+ 
+15:36:50 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+15:36:54 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
+18:49:30 **** Incremental Build of configuration Debug for project UART_Tx_Polling ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Inc -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/kisha/OneDrive/Desktop/KISHAN/Firmware Dev/STM32 HAL APIs Drivers/UART_Tx_Polling/Drivers/STM32F4xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UART_Tx_Polling.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kisha\OneDrive\Desktop\KISHAN\Firmware Dev\STM32 HAL APIs Drivers\UART_Tx_Polling\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Polling.elf
+ 
+arm-none-eabi-size  UART_Tx_Polling.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Polling.elf  > "UART_Tx_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     40	   1632	   8092	   1f9c	UART_Tx_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_Tx_Polling.list
+ 
